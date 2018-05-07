@@ -5,7 +5,7 @@
 @endsection
 
 @section('redaktor')
-	<form method="POST" action="/kategorie/{kategoria}/{podkategoria}/{zestaw}">
+	<form method="POST" action="/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}">
 		{{ csrf_field() }}
 
 		Po Polsku:<br>

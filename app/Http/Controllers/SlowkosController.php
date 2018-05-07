@@ -60,12 +60,11 @@ class SlowkosController extends Controller
 
 		$slowko->kategoria = $kategoria;
 		$slowko->podkategoria = $podkategoria;
-		$slowko->zestaw = (int)$zestaw;
+		$slowko->zestaw = $zestaw;
 		$slowko->slowko = $dodawane;
 
 		$slowko->save();
 
-		return redirect('/');
-		//->back();
+		return $this->showSlowka($kategoria, $podkategoria, $zestaw);
 	}
 }

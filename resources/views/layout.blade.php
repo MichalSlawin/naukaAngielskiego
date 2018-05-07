@@ -1,6 +1,7 @@
  <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="/css/layout.css">
 		<title>Nauka Angielskiego</title>
 	</head>
 	<body>
@@ -12,5 +13,16 @@
 
 		@yield('redaktor')
         
+         <div class="footer">
+  			<p>
+	  			<a href="/">
+	  				Główna
+	  			</a>  
+	  			<a href="/kategorie">
+	  				Kategorie
+	  			</a>
+  			</p>
+		</div>
+
 	</body>
 </html>

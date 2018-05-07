@@ -1,0 +1,15 @@
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: aqua;
+   color: black;
+   text-align: center;
+   word-spacing: 30px;
+}
+
+a {
+	color:blue;
+	text-decoration: none;
+}
