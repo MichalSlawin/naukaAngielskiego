@@ -1,23 +1,17 @@
 @extends('layout')
 
 @section('naglowek')
-    Slowka
+    Zestaw nr {{ $zestaw }}
 @endsection
 
 @section('content')
 
- 	<ul>
-		@foreach ($slowka as $slowko)
-		    <li>{{ $slowko->slowko }}</li>
-	    @endforeach
-    </ul>
+	<h3><a href= "/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}/nauka">
+		Tryb nauki
+	</a></h3>
+
+	<h3><a href= "/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}/sprawdzian">
+		Tryb sprawdzania wiedzy
+	</a></h3>
     
-@endsection
-
-@section('redaktor')
-
-	<a href="/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}/dodaj">
-		<h3>Dodaj Słówko</h3>
-	</a>
-
 @endsection

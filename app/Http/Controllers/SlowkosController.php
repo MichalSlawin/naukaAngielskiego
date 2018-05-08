@@ -34,15 +34,43 @@ class SlowkosController extends Controller
     	return view('kategorie.zestawy', compact('zestawy'), compact('kategoria', 'podkategoria'));
 	}
 
+	public function showZestawOptions($kategoria, $podkategoria, $zestaw) {
+		return view('kategorie.zestaw', compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function showNauka($kategoria, $podkategoria, $zestaw) {
+    	return view('kategorie.nauka', compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function showNaukaAngPol($kategoria, $podkategoria, $zestaw) {
+		return view('algorytmy.angPol', compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function showNaukaPolAng($kategoria, $podkategoria, $zestaw) {
+    	return view('algorytmy.polAng', compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg1($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get(['slowko']);
+
+    	return view('algorytmy.alg1', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function showSprawdzian($kategoria, $podkategoria, $zestaw) {
+    	return view('kategorie.sprawdzian', compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
 	public function showSlowka($kategoria, $podkategoria, $zestaw) {
 		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
 			->where('zestaw', $zestaw)->distinct()->get(['slowko']);
 
-    	return view('kategorie.zestaw', compact('slowka'),
-    		compact('zestaw', 'kategoria', 'podkategoria'));
+    	return view('kategorie.slowka', compact('slowka'),
+    		compact('kategoria', 'podkategoria', 'zestaw'));
 	}
 
-	public function dodajSlowko($kategoria, $podkategoria, $zestaw) {
+	public function addSlowko($kategoria, $podkategoria, $zestaw) {
 		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
 			->where('zestaw', $zestaw)->distinct()->get(['slowko']);
 

@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    <a href="/kategorie">
-         <h3>Kategorie Słówek</h3>
-    </a>
+    <h3><a href="/kategorie">
+         Kategorie Słówek
+    </a></h3>
 
-    <a href="about">
-        <h3>O stronie</h3>
-    </a>
+    <h3><a href="about">
+        O stronie
+    </a></h3>
 @endsection

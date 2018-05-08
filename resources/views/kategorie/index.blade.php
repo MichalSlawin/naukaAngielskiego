@@ -6,8 +6,8 @@
 
 @section('content')
     @foreach ($kategorie as $kategoria)
-        <a href="kategorie/{{ $kategoria->kategoria }}"><h3>
+        <h3><a href="kategorie/{{ $kategoria->kategoria }}">
             {{ $kategoria->kategoria }}
-        </h3></a>
+        </a></h3>
     @endforeach
 @endsection

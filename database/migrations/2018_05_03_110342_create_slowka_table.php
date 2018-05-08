@@ -103,6 +103,97 @@ class CreateSlowkaTable extends Migration
             'podkategoria' => 'Ssaki',
             'zestaw' => '1',
             'slowko' => 'niedźwiedź;bear',
+        ],
+
+        [
+            'kategoria' => 'Zwierzęta',
+            'podkategoria' => 'Ssaki',
+            'zestaw' => '1',
+            'slowko' => 'pies;dog',
+        ],
+
+        [
+            'kategoria' => 'Zwierzęta',
+            'podkategoria' => 'Ssaki',
+            'zestaw' => '1',
+            'slowko' => 'słoń;elephant',
+        ],
+
+        [
+            'kategoria' => 'Zwierzęta',
+            'podkategoria' => 'Ssaki',
+            'zestaw' => '1',
+            'slowko' => 'żyrafa;giraffe',
+        ],
+
+        [
+            'kategoria' => 'Zwierzęta',
+            'podkategoria' => 'Ssaki',
+            'zestaw' => '1',
+            'slowko' => 'kot;cat',
+        ],
+
+        [
+            'kategoria' => 'Zwierzęta',
+            'podkategoria' => 'Ssaki',
+            'zestaw' => '2',
+            'slowko' => 'tygrys;tiger',
+        ],
+
+        [
+            'kategoria' => 'Zwierzęta',
+            'podkategoria' => 'Ptaki',
+            'zestaw' => '1',
+            'slowko' => 'papuga;parrot',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'maska;bonnet',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'opona;tire',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'akumulator;battery',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'felgi;rims',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'bagażnik;trunk',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'szyberdach;sunroof',
+        ],
+
+        [
+            'kategoria' => 'Samochody',
+            'podkategoria' => 'Części',
+            'zestaw' => '1',
+            'slowko' => 'błotnik;fender',
         ]
         ]);
     }
