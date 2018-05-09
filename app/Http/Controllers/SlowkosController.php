@@ -10,6 +10,28 @@ class SlowkosController extends Controller
 		return view('welcome');
 	}
 
+	public function crud() {
+		return view('crud');
+	}
+
+	public function create() {
+		return view('create');
+	}
+
+	public function read() {
+		$slowka = Slowko::get();
+
+		return $slowka;
+	}
+
+	public function update() {
+		return view('update');
+	}
+
+	public function delete() {
+		return view('delete');
+	}
+
 	public function about() {
 		return view('about');
 	}
@@ -150,5 +172,50 @@ class SlowkosController extends Controller
 		$slowko->save();
 
 		return $this->showSlowka($kategoria, $podkategoria, $zestaw);
+	}
+
+	public function storeCreate() {
+		$slowko = new \naukaAngielskiego\Slowko;
+
+		$poPol = request('poPol');
+		$poAng = request('poAng');
+		$kategoria = request('kategoria');
+		$podkategoria = request('podkategoria');
+		$zestaw = request('zestaw');
+
+		$dodawane = $poPol . ';' . $poAng;
+
+		$slowko->kategoria = $kategoria;
+		$slowko->podkategoria = $podkategoria;
+		$slowko->zestaw = $zestaw;
+		$slowko->slowko = $dodawane;
+
+		$slowko->save();
+
+		return $this->read();
+	}
+
+	public function commitUpdate() {
+		$id = request('id');
+		$poPol = request('poPol');
+		$poAng = request('poAng');
+		$kategoria = request('kategoria');
+		$podkategoria = request('podkategoria');
+		$zestaw = request('zestaw');
+
+		$dodawane = $poPol . ';' . $poAng;
+
+		Slowko::where('id', (int)$id)->update(['kategoria'=>$kategoria,'podkategoria'=>$podkategoria,
+			'zestaw'=>$zestaw,'slowko'=>$dodawane]);
+
+		return $this->read();
+	}
+
+	public function commitDelete() {
+		$id = request('id');
+		$slowko = Slowko::find((int)$id);
+		$slowko->delete();
+
+		return $this->read();
 	}
 }

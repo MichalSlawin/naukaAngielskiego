@@ -2,6 +2,22 @@
 
 Route::get('/', 'SlowkosController@welcome');
 
+Route::get('/crud', 'SlowkosController@crud');
+
+Route::get('/crud/create', 'SlowkosController@create');
+
+Route::post('crud/storeCreate', 'SlowkosController@storeCreate');
+
+Route::get('/crud/read', 'SlowkosController@read');
+
+Route::get('/crud/update', 'SlowkosController@update');
+
+Route::post('/crud/storeUpdate', 'SlowkosController@commitUpdate');
+
+Route::get('/crud/delete', 'SlowkosController@delete');
+
+Route::post('/crud/commitDelete', 'SlowkosController@commitDelete');
+
 Route::get('about', 'SlowkosController@about');
 
 Route::get('/kategorie', 'SlowkosController@showKategorie');
