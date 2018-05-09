@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="/css/layout.css">
 		<title>Nauka Angielskiego</title>
+		@yield('head')
 	</head>
 	<body>
 		<h1>

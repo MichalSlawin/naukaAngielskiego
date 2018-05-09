@@ -1,20 +1,32 @@
 @extends('layout')
 
+@section('naglowek')
+	Wynik
+@endsection
+
 @section('content')
 
- 	<ul>
+	<ul>
 		@foreach ($slowka as $slowko)
+
 			<?php
 				$toFind = ';';
 				$endPos = strpos($slowko->slowko, $toFind);
 				$poPol = substr($slowko->slowko, 0, (int)$endPos);
-
 				$poAng = substr($slowko->slowko, (int)$endPos+1);
+				$odp = $_GET["$poPol"];
 			?>
 
-		    <li>{{ $poPol }} - {{ $poAng }}</li>
+		    <li>{{ $poPol }} - {{ $odp }}</li>
+		    <?php if ($poPol == $odp): ?>
+		    	<font color="green">Dobrze!</font>
+			<?php else: ?>
+				<font color="red">Źle.</font>
+			<?php endif; ?>
 
 	    @endforeach
     </ul>
     
 @endsection
+
+

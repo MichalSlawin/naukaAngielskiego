@@ -42,19 +42,75 @@ class SlowkosController extends Controller
     	return view('kategorie.nauka', compact('kategoria', 'podkategoria', 'zestaw'));
 	}
 
-	public function showNaukaAngPol($kategoria, $podkategoria, $zestaw) {
-		return view('algorytmy.angPol', compact('kategoria', 'podkategoria', 'zestaw'));
-	}
-
 	public function showNaukaPolAng($kategoria, $podkategoria, $zestaw) {
     	return view('algorytmy.polAng', compact('kategoria', 'podkategoria', 'zestaw'));
 	}
 
-	public function alg1($kategoria, $podkategoria, $zestaw) {
+	public function alg1PA($kategoria, $podkategoria, $zestaw) {
 		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
-			->where('zestaw', $zestaw)->distinct()->get(['slowko']);
+			->where('zestaw', $zestaw)->distinct()->get();
 
-    	return view('algorytmy.alg1', compact('slowka'), 
+    	return view('algorytmy.alg1PA', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg1PAWynik($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg1PAWynik', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg2PA($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg2PA', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg2PAWynik($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg2PAWynik', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function showNaukaAngPol($kategoria, $podkategoria, $zestaw) {
+		return view('algorytmy.angPol', compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg1AP($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg1AP', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg1APWynik($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg1APWynik', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg2AP($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg2AP', compact('slowka'), 
+    		compact('kategoria', 'podkategoria', 'zestaw'));
+	}
+
+	public function alg2APWynik($kategoria, $podkategoria, $zestaw) {
+		$slowka = Slowko::where('kategoria', $kategoria)->where('podkategoria', $podkategoria)
+			->where('zestaw', $zestaw)->distinct()->get();
+
+    	return view('algorytmy.alg2APWynik', compact('slowka'), 
     		compact('kategoria', 'podkategoria', 'zestaw'));
 	}
 

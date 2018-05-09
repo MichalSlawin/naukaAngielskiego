@@ -16,11 +16,29 @@ Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka', 'SlowkosContr
 
 Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/polAng', 'SlowkosController@showNaukaPolAng');
 
-Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/polAng/alg1', 'SlowkosController@alg1');
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/polAng/alg1', 'SlowkosController@alg1PA');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/polAng/alg1/wynik', 'SlowkosController@alg1PAWynik');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/polAng/alg2', 'SlowkosController@alg2PA');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/polAng/alg2/wynik', 'SlowkosController@alg2PAWynik');
 
 Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/angPol', 'SlowkosController@showNaukaAngPol');
 
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/angPol/alg1', 'SlowkosController@alg1AP');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/angPol/alg1/wynik', 'SlowkosController@alg1APWynik');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/angPol/alg2', 'SlowkosController@alg2AP');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/nauka/angPol/alg2/wynik', 'SlowkosController@alg2APWynik');
+
 Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/sprawdzian', 'SlowkosController@showSprawdzian');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/sprawdzian/polAng', 'SlowkosController@alg2PA');
+
+Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/sprawdzian/angPol', 'SlowkosController@alg2AP');
 
 Route::get('/kategorie/{kategoria}/{podkategoria}/{zestaw}/pokaz', 'SlowkosController@showSlowka');
 

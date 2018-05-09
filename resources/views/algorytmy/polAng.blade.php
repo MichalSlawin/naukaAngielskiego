@@ -13,9 +13,9 @@
 	<h3><a href="/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}/nauka/polAng/alg2">
 		Pytaj do skutku
 	</a></h3>
-
-	<h3><a href="/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}/nauka/polAng/alg3">
+	
+	<!--<h3><a href="/kategorie/{{ $kategoria }}/{{ $podkategoria }}/{{ $zestaw }}/nauka/polAng/alg3">
 		Moj algorytm
-	</a></h3>
+	</a></h3>-->
 	
 @endsection
